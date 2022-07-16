@@ -14,7 +14,7 @@ module.exports = {
   overrides: [
     // Next.jsのpagesではdefault exportで記述するため、rulesをoverrideする
     {
-      files: ['*/pages/*'],
+      files: ['*/pages/*', './src/createEmotionCache.ts'],
       rules: {
         'import/no-default-export': 'off',
         'import/prefer-default-export': 'error'
