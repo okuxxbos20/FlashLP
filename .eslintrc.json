@@ -1,6 +1,7 @@
 {
   "extends": ["next/core-web-vitals", "prettier"],
   "rules": {
+    "import/no-default-export": "error",
     "import/order": [
       "error",
       {
@@ -9,5 +10,14 @@
         }
       }
     ]
-  }
+  },
+  "overrides": [
+    {
+      "files": ["*/pages/*"],
+      "rules": {
+        "import/no-default-export": "off",
+        "import/prefer-default-export": "error"
+      }
+    }
+  ]
 }
